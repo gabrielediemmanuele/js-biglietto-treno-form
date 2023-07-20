@@ -23,6 +23,9 @@
 
   <body>
     <div class="container mt-5">
+      <div class="text-center fs-3 mb-3 fw-bold text-white">
+        CALCOLA IL PREZZO DEL TUO BIGLIETTO
+      </div>
       <div class="card">
         <div class="card-body">
           <div class="container text-center">
@@ -79,10 +82,30 @@
           </div>
         </div>
       </div>
-      <!-- PARTE SOTTOSTANTE -->
-      <div class="card mt-5">
+      <!-- PARTE SOTTOSTANTE ticket-->
+      <div class="text-center fs-3 mt-5 fw-bold text-white">
+        IL TUO BIGLIETTO
+      </div>
+      <div class="card mt-3">
         <div class="card-body">
-          <p id="ticket-text"></p>
+          <div class="card" id="nobox" style="width: auto">
+            <div
+              class="card-header text-white"
+              style="background-color: rgb(229, 43, 90)"
+            >
+              Il tuo Biglietto
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Nome Utente
+                <div></div>
+              </li>
+              <li class="list-group-item">
+                Prezzo del biglietto:
+                <p id="ticket-text"></p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

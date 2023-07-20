@@ -3,5 +3,9 @@ body {
 }
 
 .card {
-  box-shadow: 5px 5px 25px 5px;
+  box-shadow: 5px 5px 25px;
+}
+
+#nobox {
+  box-shadow: none;
 }
