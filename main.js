@@ -8,11 +8,17 @@ const sendInfoButton = document.getElementById("send-info");
 // Step 4 - Creare una const per il testo del biglietto
 const ticketText = document.getElementById("ticket-text");
 
+// EXTRA - creare una const user name
+const userName = document.getElementById("user-name");
+const ticketName = document.getElementById("ticket-name");
+
 // Prezzo del biglietto
 /* let finalPrice = distanceKM.value * 0.21; */
 
 sendInfoButton.addEventListener("click", function () {
   let finalPrice = distanceKM.value * 0.21;
+
+  ticketName.innerHTML = userName.value;
 
   const userAgeValue = parseInt(userAge.value);
 
@@ -23,8 +29,7 @@ sendInfoButton.addEventListener("click", function () {
   }
 
   // aggiungerli al paragrafo ticket-text
-  ticketText.innerHTML =
-    "Il prezzo del tuo biglietto è " + finalPrice.toFixed(2) + " €";
+  ticketText.innerHTML = finalPrice.toFixed(2) + " €";
   console.log(ticketText.innerHTML);
 
   // Per liberare gli input in modo pulito
