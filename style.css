@@ -1,3 +1,7 @@
 body {
   background-color: rgb(229, 43, 90);
 }
+
+.card {
+  box-shadow: 5px 5px 25px 5px;
+}
