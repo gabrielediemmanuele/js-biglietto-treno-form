@@ -16,24 +16,31 @@ const ticketName = document.getElementById("ticket-name");
 /* let finalPrice = distanceKM.value * 0.21; */
 
 sendInfoButton.addEventListener("click", function () {
-  let finalPrice = distanceKM.value * 0.21;
-
-  ticketName.innerHTML = userName.value;
-
-  const userAgeValue = parseInt(userAge.value);
-
-  if (userAgeValue < 18) {
-    finalPrice = finalPrice - (finalPrice * 20) / 100;
-  } else if (userAgeValue >= 65) {
-    finalPrice = finalPrice - (finalPrice * 40) / 100;
+  //CONTROLLO RIEMPIMENTO
+  if (isNaN(distanceKM.value) || isNaN(userAge.value) || userName.value == "") {
+    alert("Attenzione, qualcosa è andata male! Riprova!");
   }
+  //SE IL RIEMPIMENTO è CORRETTO >
+  else {
+    let finalPrice = distanceKM.value * 0.21;
 
-  // aggiungerli al paragrafo ticket-text
-  ticketText.innerHTML = finalPrice.toFixed(2) + " €";
-  console.log(ticketText.innerHTML);
+    ticketName.innerHTML = userName.value;
 
-  // Per liberare gli input in modo pulito
-  distanceKM.value = "";
-  userAge.value = "";
-  userName.value = "";
+    const userAgeValue = parseInt(userAge.value);
+
+    if (userAgeValue < 18) {
+      finalPrice = finalPrice - (finalPrice * 20) / 100;
+    } else if (userAgeValue >= 65) {
+      finalPrice = finalPrice - (finalPrice * 40) / 100;
+    }
+
+    // aggiungerli al paragrafo ticket-text
+    ticketText.innerHTML = finalPrice.toFixed(2) + " €";
+    console.log(ticketText.innerHTML);
+
+    // Per liberare gli input in modo pulito
+    distanceKM.value = "";
+    userAge.value = "";
+    userName.value = "";
+  }
 });
