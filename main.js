@@ -35,4 +35,5 @@ sendInfoButton.addEventListener("click", function () {
   // Per liberare gli input in modo pulito
   distanceKM.value = "";
   userAge.value = "";
+  userName.value = "";
 });
