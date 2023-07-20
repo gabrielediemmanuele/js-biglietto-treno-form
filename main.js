@@ -25,4 +25,8 @@ sendInfoButton.addEventListener("click", function () {
   // aggiungerli al paragrafo ticket-text
   ticketText.innerHTML =
     "Il prezzo del tuo biglietto è " + finalPrice.toFixed(2) + " €";
+
+  // Per liberare gli input in modo pulito
+  distanceKM.value = "";
+  userAge.value = "";
 });
