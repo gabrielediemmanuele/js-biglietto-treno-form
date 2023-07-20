@@ -16,15 +16,75 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="container mt-5">
-      N° Km <input id="distanceKM" type="text" placeholder="Quantità Km" /> Età
-      <input id="userAge" type="text" placeholder="Quanti anni hai?" />
-      <button id="send-info">Compra Ora!</button>
-      <hr />
-      <p id="ticket-text"></p>
+      <div class="card">
+        <div class="card-body">
+          <div class="container text-center">
+            <div class="row">
+              <!-- NOME E COGNOME -->
+              <div class="col">
+                <div class="mb-2 text-danger fw-bold">Nome e Cognome</div>
+                <input
+                  id="user-name"
+                  class="border-1 border-danger rounded"
+                  type="text"
+                  placeholder="nome e cognome"
+                />
+              </div>
+              <!-- KM DA PERCORRERE -->
+              <div class="col">
+                <div class="mb-2 text-danger fw-bold">Km da percorrere</div>
+                <input
+                  id="distanceKM"
+                  class="border-1 border-danger rounded"
+                  type="text"
+                  placeholder="Quantità Km"
+                />
+              </div>
+              <!-- ETA' -->
+              <div class="col">
+                <div class="mb-2 text-danger fw-bold">Età</div>
+                <input
+                  class="border-1 border-danger rounded"
+                  id="userAge"
+                  type="text"
+                  placeholder="Quanti anni hai?"
+                />
+              </div>
+              <!-- Bottone Compra -->
+              <div class="col-3 ms-auto mt-5">
+                <button
+                  id="send-info"
+                  class="border-1 border-danger rounded bg-light text-danger"
+                >
+                  Acquista
+                </button>
+              </div>
+              <!-- Bottone Reset -->
+              <div class="col-3 me-auto mt-5">
+                <button
+                  id="send-info"
+                  class="border-1 border-danger rounded bg-light text-danger"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PARTE SOTTOSTANTE -->
+      <div class="card mt-5">
+        <div class="card-body">
+          <p id="ticket-text"></p>
+        </div>
+      </div>
     </div>
     <!-- JS-Link-->
     <script type="text/javascript" src="./main.js"></script>
