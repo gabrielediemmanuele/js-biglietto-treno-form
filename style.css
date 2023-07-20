@@ -9,3 +9,23 @@ body {
 #nobox {
   box-shadow: none;
 }
+
+#send-info,
+#reset-button,
+#userAge,
+#distanceKM,
+#user-name {
+  border-style: solid;
+}
+
+#send-info,
+#reset-button {
+  background-color: white;
+  color: rgb(229, 43, 90);
+}
+
+#send-info:hover,
+#reset-button:hover {
+  background-color: rgb(229, 43, 90);
+  color: white;
+}
